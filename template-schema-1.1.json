@@ -1,0 +1,349 @@
+{
+    "type": "object",
+    "properties": {
+        "basePath": {
+            "type": "string"
+        },
+        "apiVersion": {
+            "type": "string"
+        },
+        "apiDocuments": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "type": "integer"
+                    },
+                    "resourcePath": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "apis": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "apiIndex": {
+                                    "type": "integer"
+                                },
+                                "path": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "operations": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "opIndex": {
+                                                "type": "integer"
+                                            },
+                                            "httpMethod": {
+                                                "type": "string"
+                                            },
+                                            "summary": {
+                                                "type": "string"
+                                            },
+                                            "notes": {
+                                                "type": "string"
+                                            },
+                                            "responseClass": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "className": {
+                                                        "type": "string"
+                                                    },
+                                                    "classLinkName": {
+                                                        "type": "string"
+                                                    },
+                                                    "genericClasses": {
+                                                        "type": "$responseClass"
+                                                    }
+                                                }
+                                            },
+                                            "nickname": {
+                                                "type": "string"
+                                            },
+                                            "parameters": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "paramType": {
+                                                            "type": "string"
+                                                        },
+                                                        "paras": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "name": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "required": {
+                                                                        "type": "boolean",
+                                                                        "required": true
+                                                                    },
+                                                                    "description": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "type": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "linkType": {
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "requestQuery": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "paramType": {
+                                                        "type": "string"
+                                                    },
+                                                    "paras": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "required": {
+                                                                    "type": "boolean",
+                                                                    "required": true
+                                                                },
+                                                                "description": {
+                                                                    "type": "string"
+                                                                },
+                                                                "type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "linkType": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "requestHeader": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "paramType": {
+                                                        "type": "string"
+                                                    },
+                                                    "paras": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "required": {
+                                                                    "type": "boolean",
+                                                                    "required": true
+                                                                },
+                                                                "description": {
+                                                                    "type": "string"
+                                                                },
+                                                                "type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "linkType": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "requestBody": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "paramType": {
+                                                        "type": "string"
+                                                    },
+                                                    "paras": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "required": {
+                                                                    "type": "boolean",
+                                                                    "required": true
+                                                                },
+                                                                "description": {
+                                                                    "type": "string"
+                                                                },
+                                                                "type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "linkType": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "requestPath": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "paramType": {
+                                                        "type": "string"
+                                                    },
+                                                    "paras": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "required": {
+                                                                    "type": "boolean",
+                                                                    "required": true
+                                                                },
+                                                                "description": {
+                                                                    "type": "string"
+                                                                },
+                                                                "type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "linkType": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "responseHeader": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "paramType": {
+                                                        "type": "string"
+                                                    },
+                                                    "paras": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "required": {
+                                                                    "type": "boolean",
+                                                                    "required": true
+                                                                },
+                                                                "description": {
+                                                                    "type": "string"
+                                                                },
+                                                                "type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "linkType": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "errorResponses": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "code": {
+                                                            "type": "integer"
+                                                        },
+                                                        "reason": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "samples": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "sampleDescription": {
+                                                            "type": "string"
+                                                        },
+                                                        "sampleRequest": {
+                                                            "type": "string"
+                                                        },
+                                                        "sampleResponse": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "dataTypes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "linkType": {
+                                    "type": "string"
+                                },
+                                "required": {
+                                    "type": "boolean",
+                                    "required": true
+                                },
+                                "access": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "notes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
