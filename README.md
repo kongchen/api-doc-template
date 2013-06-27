@@ -6,7 +6,7 @@ they're used by:
 - [swagger maven plugin](https://github.com/kongchen/swagger-maven-plugin), *a maven plugin*
   >can help you generate swagger API document during build phase using these templates.
 
-- [haohao](https://github.com/kongchen/haohao), *a command line tool*
+- [Ginger](https://github.com/kongchen/ginger), *a command line tool*
   > can help you generate swagger API document using these template as well as any request & response samples for any of your API operations.
 
 There're 5 templates by now:
