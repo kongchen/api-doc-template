@@ -3,7 +3,7 @@ Api Document Template
 The templates are [mustache](http://mustache.github.io/) templates to generate RESTful API Document with the help of [Swagger](https://github.com/wordnik/swagger-core/wiki),
 they're used by:
 
-- [swagger maven plugin](https://github.com/kongchen/swagger-maven-plugin), *a maven plugin*
+- [Swagger Maven Plugin](https://github.com/kongchen/swagger-maven-plugin), *a maven plugin*
   >can help you generate swagger API document during build phase using these templates.
 
 - [Ginger](https://github.com/kongchen/ginger), *a command line tool*
