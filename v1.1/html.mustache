@@ -88,6 +88,8 @@
                                         <li><a href="#tabs{{index}}{{apiIndex}}{{opIndex}}-2">Response Body</a></li>
                                         <li><a href="#tabs{{index}}{{apiIndex}}{{opIndex}}-3">Response Status Codes</a>
                                         </li>
+                                        <li><a href="#tabs{{index}}{{apiIndex}}{{opIndex}}-4">Examples</a>
+                                        </li>
                                     </ul>
                                     <div id="tabs{{index}}{{apiIndex}}{{opIndex}}-1">
                                         <ul>
@@ -117,7 +119,7 @@
                                     </div>
                                     <div id="tabs{{index}}{{apiIndex}}{{opIndex}}-2">
                                         <p>{{#responseClass}}<a
-                                                href="#{{{responseClass}}}">{{responseClass}}</a>{{/responseClass}}
+                                                href="#{{{classLinkName}}}">{{className}}</a>{{/responseClass}}
                                             {{^responseClass}}No Content{{/responseClass}}
                                         </p>
                                     </div>
@@ -134,6 +136,23 @@
                                                 </tr>
                                             {{/errorResponses}}
                                         </table>
+                                    </div>
+                                    <div id="tabs{{index}}{{apiIndex}}{{opIndex}}-4">
+                                        <p>{{#samples}}
+                                            Sample Request
+
+                                            <pre>
+                                            {{{sampleRequest}}}
+                                            </pre>
+
+                                            - Sample Response
+
+                                            <pre>
+                                            {{{sampleResponse}}}
+                                            </pre>
+                                           {{/samples}}
+                                           {{^samples}}No Samples{{/samples}}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
