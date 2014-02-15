@@ -24,9 +24,9 @@ There're 5 templates by now:
     >This template actually uses [markdown.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/markdown.mustache) but generates HTML with the help of [Strapdown.js](http://strapdownjs.com/)
 
 
-# **Welcome to pull new document templates**
+# **Welcome to submit new document templates**
 
-If you dissatisfy these templates, write your own and do not foget to [**pull**](https://github.com/kongchen/api-doc-template/pulls)
+If you dissatisfy these templates, write your own and do not foget to [**send pull request**](https://github.com/kongchen/api-doc-template/pulls)
 
 [Click here](https://github.com/kongchen/api-doc-template/blob/master/template-schema-1.1.json) to see the json schema of the data the template consumes.
 
