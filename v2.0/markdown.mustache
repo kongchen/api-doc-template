@@ -1,47 +1,57 @@
-#API Document
+#{{#apiInfo}}{{title}}
 
+{{description}}
 
-## BasePath: {{basePath}}
+Terms of Service: [{{termsOfServiceUrl}}]({{termsOfServiceUrl}})
 
-## Api Version: {{apiVersion}}
+Contact: [{{contact}}](mailto:{{contact}})
 
-## Resources
+License: [{{license}}]({{licenseUrl}})
+
+{{/apiInfo}}
+
+BasePath: {{basePath}}
+
+Api Version: {{apiVersion}}
+
+## APIs
 {{#apiDocuments}}
-### {{index}}. {{resourcePath}}
+### {{resourcePath}}
+{{#description}}
 #### Overview
 {{{description}}}
+{{/description}}
 
 {{#apis}}
-#### {{index}}.{{apiIndex}} `{{path}}`
 {{#operations}}
-##### {{index}}.{{apiIndex}}.{{opIndex}} {{nickname}}
-**{{httpMethod}}** `{{path}}`
+#### **{{httpMethod}}** `{{path}}`
+##### {{nickname}} 
 
 {{summary}}
 {{{notes}}}
 
 ###### URL
-    {{url}}
+{{url}}
 ###### Parameters
 {{#parameters}}
 - {{paramType}}
 
-    <table border="1">
-        <tr>
-            <th>Parameter</th>
-            <th>Required</th>
-            <th>Description</th>
-            <th>Data Type</th>
-        </tr>
-        {{#paras}}
-        <tr>
-            <th>{{name}}</th>
-            <td>{{required}}</td>
-            <td>{{description}}</td>
-            <td>{{#linkType}}<a href="#{{linkType}}">{{type}}</a>{{/linkType}}{{^linkType}}{{type}}{{/linkType}}</td>
-        </tr>
-        {{/paras}}
-    </table>
+<table border="1">
+    <tr>
+        <th>Parameter</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Data Type</th>
+    </tr>
+    {{#paras}}
+    <tr>
+        <th>{{name}}</th>
+        <td>{{required}}</td>
+        <td>{{description}}</td>
+        <td>{{#linkType}}<a href="#{{linkType}}">{{type}}</a>{{/linkType}}{{^linkType}}{{type}}{{/linkType}}</td>
+    </tr>
+    {{/paras}}
+</table>
 {{/parameters}}
 
 {{#responseClass}}
@@ -51,18 +61,11 @@
 
 
 ###### Errors
-<table border="1">
-    <tr>
-        <th>Status Code</th>
-        <th>Reason</th>
-    </tr>
-    {{#errorResponses}}
-        <tr>
-            <td>{{code}}</td>
-            <td>{{message}}</td>
-        </tr>
-    {{/errorResponses}}
-</table>
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+{{#errorResponses}}
+| {{code}}    | {{message}} | {{#linkType}}[{{type}}](#{{linkType}}){{/linkType}}{{^linkType}}{{#type}}{{{type}}}{{/type}}{{^type}}-{{/type}}{{/linkType}} |
+{{/errorResponses}}
 
 {{#samples}}
 ###### Samples
@@ -104,15 +107,22 @@
         <th>notes</th>
     </tr>
     {{#items}}
-        <tr>
-            <td>{{#linkType}}<a href="#{{linkType}}">{{type}}</a>{{/linkType}}{{^linkType}}{{type}}{{/linkType}}</td>
-            <td>{{#required}}required{{/required}}{{^required}}optional{{/required}}</td>
-            <td>{{#access}}{{{access}}}{{/access}}{{^access}}-{{/access}}</td>
-            <td>{{#description}}{{{description}}}{{/description}}{{^description}}-{{/description}}</td>
-            <td>{{#notes}}{{{notes}}}{{/notes}}{{^notes}}-{{/notes}}</td>
-        </tr>
+    <tr>
+        <td>{{#linkType}}<a href="#{{linkType}}">{{type}}</a>{{/linkType}}{{^linkType}}{{type}}{{/linkType}}</td>
+        <td>{{#required}}required{{/required}}{{^required}}optional{{/required}}</td>
+        <td>{{#access}}{{{access}}}{{/access}}{{^access}}-{{/access}}</td>
+        <td>{{#description}}{{{description}}}{{/description}}{{^description}}-{{/description}}{{#allowableValue}} Allowable
+        values:{{.}}{{/allowableValue}}</td>
+        <td>{{#notes}}{{{notes}}}{{/notes}}{{^notes}}-{{/notes}}</td>
+    </tr>
     {{/items}}
 </table>
 
 {{/dataTypes}}
 
+{{#enumTypes}}
+## {{name}}
+{{#allowableValues}}
+{{.}}
+{{/allowableValues}}
+{{/enumTypes}}
