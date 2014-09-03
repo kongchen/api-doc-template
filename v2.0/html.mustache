@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>API Document</title>
+    <title>{{#apiInfo}}{{title}}{{/apiInfo}}</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
@@ -57,8 +57,14 @@
 </head>
 <body>
 <div id="main_container">
+{{#apiInfo}}
+    <h1>{{title}}</h1>
     <h3>BasePath: {{basePath}}</h3>
-
+    <h3>{{description}}</h3>
+    <h3>Terms of Service: <a href="{{termsOfServiceUrl}}">{{termsOfServiceUrl}}</a></h3>
+    <h3>Contact: <a href="mailto:{{contact}}">{{contact}}</a></h3>
+    <h3>License: <a href="{{licenseUrl}}">{{license}}</a></h3>
+{{/apiInfo}}
     <h3> Api Version: {{apiVersion}}</h3>
 
     <div id="api_container">
