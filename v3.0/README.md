@@ -1,1 +1,1 @@
-The templates file in this folder is for Swagger spec 2.0.
+The template files in this folder follow Swagger spec 2.0.
