@@ -1,33 +1,12 @@
 Api Document Template
 ================
-The templates are [mustache](http://mustache.github.io/) templates to generate RESTful API Document with the help of [Swagger](https://github.com/wordnik/swagger-core/wiki),
-they're used by:
+- [Swagger Maven Plugin](https://github.com/kongchen/swagger-maven-plugin) (3.0.0+) now supports Swagger Spec 2.0, and using [handlebars](http://handlebarsjs.com/) as the template engine to generate static document, the template files are located at the [v3.0 folder](https://github.com/kongchen/api-doc-template/tree/master/v3.0).
 
-- [Swagger Maven Plugin](https://github.com/kongchen/swagger-maven-plugin), *a maven plugin*
-  >can help you generate swagger API document during build phase using these templates.
-
-- [Ginger](https://github.com/kongchen/ginger), *a command line tool*
-  > can help you generate swagger API document using these template as well as any request & response samples for any of your API operations.
-
-There're 5 templates by now:
-
-1. [wiki.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/wiki.mustache) for [Confluence](http://en.wikipedia.org/wiki/Confluence_(software\)) wiki markup output.
-   
-2. [wiki-new.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/wiki-new.mustache) another [Confluence](http://en.wikipedia.org/wiki/Confluence_(software\)) wiki markup template.
- 
-3. [html.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/html.mustache) for html output, [click here](http://htmlpreview.github.io/?https://raw.github.com/kongchen/swagger-maven-plugin/master/GeneratedSamples/apidoc.html) to see a sample output.
- 
-4. [markdown.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/markdown.mustache) for markdown output, [click here](https://github.com/kongchen/swagger-maven-plugin/wiki/Sample.markdown) to see a sample output.
-
-5. [strapdown.html.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/strapdown.html.mustache) for HTML output, [click here](http://htmlpreview.github.io/?https://raw.github.com/kongchen/swagger-maven-plugin/master/GeneratedSamples/apidoc.strapdown.html) to see a sample output.
-    
-    >This template actually uses [markdown.mustache](https://github.com/kongchen/api-doc-template/blob/master/v1.1/markdown.mustache) but generates HTML with the help of [Strapdown.js](http://strapdownjs.com/)
+- For former version (2.3.4), which supports Swagger Spec 1.2, the template engine is [mustache](https://mustache.github.io/) and the template files are in the [v2.0 folder](https://github.com/kongchen/api-doc-template/tree/master/v2.0).
 
 
 # **Welcome to submit new document templates**
 
 If you dissatisfy these templates, write your own and do not foget to [**send pull request**](https://github.com/kongchen/api-doc-template/pulls)
-
-[Click here](https://github.com/kongchen/api-doc-template/blob/master/template-schema-1.1.json) to see the json schema of the data the template consumes.
 
 
