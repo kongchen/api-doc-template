@@ -42,7 +42,7 @@
     <td>{{in}}</td>
     <td>{{#if required}}yes{{else}}no{{/if}}</td>
     <td>{{description}}{{#if pattern}} (**Pattern**: `{{pattern}}`){{/if}}</td>
-    <td> - </td>
+    <td>{{#if defaultValue}}{{defaultValue}}{{else}} - {{/if}}</td>
 {{#ifeq in "body"}}
     <td>
     {{#ifeq schema.type "array"}}Array[<a href="{{schema.items.$ref}}">{{basename schema.items.$ref}}</a>]{{/ifeq}}
