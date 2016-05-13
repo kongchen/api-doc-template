@@ -41,7 +41,14 @@
     <th>{{name}}</th>
     <td>{{in}}</td>
     <td>{{#if required}}yes{{else}}no{{/if}}</td>
-    <td>{{description}}{{#if pattern}} (**Pattern**: `{{pattern}}`){{/if}}</td>
+    <td>
+        {{description}}{{#if pattern}} (**Pattern**: `{{pattern}}`){{/if}}
+        {{#if enum}}
+            <p>
+                <b>Allowable values</b>: {{#join enum ", "}} {{this}}{{/join}}
+            </p>
+        {{/if}}
+    </td>
     <td>{{#if defaultValue}}{{defaultValue}}{{else}} - {{/if}}</td>
 {{#ifeq in "body"}}
     <td>
